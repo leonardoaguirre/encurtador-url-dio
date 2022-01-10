@@ -1,4 +1,4 @@
-import { config } from './config/constants';
+import { configs } from './config/constants';
 import express, { Request, Response } from "express";
 import urlRoutes from './routes/URL.routes';
 
@@ -11,4 +11,4 @@ api.get('/status',(request : Request, response : Response)=>{
 
 api.use(urlRoutes)
 
-api.listen(config.SERVER_PORT, ()=> console.log(`Server na porta : ${config.API_URL}/status`))
+api.listen(configs.SERVER_PORT, ()=> console.log(`Server na porta : ${configs.API_URL}/status`))
